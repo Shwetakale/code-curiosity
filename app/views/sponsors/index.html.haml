@@ -1,0 +1,30 @@
+%section.content-header
+  %h1
+    Sponsors :-
+
+%section.content
+  .row
+    .col-xs-12
+      .box.box-primary
+        .box-header
+          %h3.box-title
+            %span
+          .box-tools
+
+        .box-body.table-responsive
+          %table.table.table-hover.table-bordered
+            %thead
+              %tr
+                %th.col-xs-2 Name
+                %th.col-xs-1 Start Date
+                %th.col-xs-1 End Date
+                %th.col-xs-1 Is Individual
+                %th.col-xs-1 Edit
+
+            %tbody#sponsors
+              - @sponsors.each do |sponsor|
+                %tr
+                  %td= sponsor.name
+                  %td= sponsor.start_date
+                  %td= sponsor.is_individual
+                  %td= sponsor.end_date

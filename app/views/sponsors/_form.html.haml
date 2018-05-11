@@ -1,0 +1,8 @@
+= simple_form_for(@sponsor) do |f|
+  .col-xs-6
+    = f.input :name
+    = f.input :start_date, input_html: { class: 'datepicker' }
+    = f.input :end_date, input_html: { class: 'datepicker' }
+    = f.input :is_individual, as: :boolean
+    //= f.association :repositories
+    %button.btn.btn-primary{:type => 'submit'}= @sponsor.persisted? ? 'Update' : 'Create'
