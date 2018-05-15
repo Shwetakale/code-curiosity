@@ -21,7 +21,9 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  resources :repositories, only: [:index]
+  resources :repositories, only: [:index] do
+    get :search, on: :collection
+  end
 
   resources :sponsorer_details do
     member do

@@ -18,7 +18,9 @@
                 %th.col-xs-2 Name
                 %th.col-xs-1 Start Date
                 %th.col-xs-1 End Date
+                %th.col-xs-2 Sponsored Repositories
                 %th.col-xs-1 Is Individual
+                %th.col-xs-1 Is All Repositores
                 %th.col-xs-1 Edit
 
             %tbody#sponsors
@@ -26,5 +28,7 @@
                 %tr
                   %td= sponsor.name
                   %td= sponsor.start_date
-                  %td= sponsor.is_individual
                   %td= sponsor.end_date
+                  %td= sponsor.repositories.collect{ |repo| repo.name }.join(",")
+                  %td= sponsor.is_individual
+                  %td= sponsor.is_all_repos

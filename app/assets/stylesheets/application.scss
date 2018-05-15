@@ -28,6 +28,9 @@
 @import "bootstrap2-toggle";
 @import 'activities';
 @import 'redeem';
+@import "select2";
+@import "select2-bootstrap";
+@import "bootstrap-datepicker";
 
 .typeahead.dropdown-menu, .tt-hint, .tt-input, .tt-menu {
   width: 90%;
